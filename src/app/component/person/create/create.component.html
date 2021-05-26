@@ -1,0 +1,33 @@
+<div class="container col-md-6">
+    <div class="card">
+        <div class="card-header">
+            <h3>New Person</h3>
+        </div>
+        <div class="card-body">
+            <div>
+                <div class="form-group">
+                    <label for="">ID Document <span class="text-danger">*</span></label>
+                    <input type="number" class="form-control" [(ngModel)]="person.documentId" name="documentId" required>
+                </div>
+                <div class="form-group">
+                    <label for="">Fullname <span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" [(ngModel)]="person.fullname" name="fullname" required>
+                </div>
+                <div class="form-group">
+                    <label for="">Birth <span class="text-danger">*</span></label>
+                    <input type="date" class="form-control" [(ngModel)]="person.birth" name="birth" required>
+                </div>
+                <div class="form-group">
+                    <label for="">Father´s ID Document</label>
+                    <input type="number" class="form-control" [(ngModel)]="person.fatherDocumentId" name="fatherDocumentId">
+                </div>
+                <div class="form-group">
+                    <label for="">Mother´s ID Document</label>
+                    <input type="number" class="form-control" [(ngModel)]="person.motherDocumentId" name="motherDocumentId">
+                </div>
+                <button class="btn btn-primary" type="submit" (click)="save()">Save</button>
+                <button class="btn btn-danger" (click)="return()">Return</button>
+            </div>
+        </div>
+    </div>
+</div>
